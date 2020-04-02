@@ -20,7 +20,7 @@ function addCustomer (custData, db = connection) {
     phone: custData.phone,
     address: custData.address,
     description: custData.description,
-    cust_id: custData.custId
+    customer_id: custData.custId
 
   })
 }
@@ -28,18 +28,18 @@ function addCustomer (custData, db = connection) {
 function addService (serviceData, id, db = connection) {
   return db('services').insert({
     description: serviceData.description,
-    status: serviceData.status,
     hours: serviceData.hours,
     materials: serviceData.materials,
-    user_id: id
+    customer_id: id
   })
 }
 
 function getServices (id, db = connection) {
   return db('customers')
-    .join('services', 'customers.id', 'user_id')
+    .join('services', 'customers.id', 'customer_id')
     .where('customers.id', id)
     .select('customers.id as customerId', 'customers.name', 'customers.phone', 'customers.email', 'customers.address', 'services.id as serviceId', 'services.description', 'services.engineer', 'services.hours', 'services.materials', 'services.material_cost')
+    .first()
 }
 
 function getCustomers (db = connection) {

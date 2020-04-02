@@ -1,3 +1,4 @@
+
 const express = require('express')
 
 const db = require('./db')
@@ -15,7 +16,7 @@ module.exports = router
 router.get('/', (req, res) => {
   db.getCustomers()
     .then(customers => {
-      res.render('home', customers)
+      res.render('home', {customers})
     })
     .catch(err => {
       res.send('Error: ' + err.message)
@@ -26,33 +27,62 @@ router.get('/', (req, res) => {
 router.get('/customer/:id', (req, res) => {
   const id = Number(req.params.id)
   db.getServices(id)
-    .then(result => {
-      const viewData = {
-        customerId: result.customerId,
-        name: result.name,
-        phone: result.phone,
-        email: result.email,
-        address: result.address,
-        serviceId: result.serviceId,
-        description: result.description,
-        engineer: result.engineer,
-        hours: result.hours,
-        materials: result.materials,
-        material_cost: result.material_cost
-      }
-      res.render('customer', viewData)
-    })
-    .catch(err => {
-      res.send('Error: ' + err.message)
-    })
+      .then(result => {
+        console.log(result)
+        const viewData = {
+          customerId: result.customerId,
+          name: result.name,
+          phone: result.phone,
+          email: result.email,
+          address: result.address,
+          serviceId: result.serviceId,
+          description: result.description,
+          engineer: result.engineer,
+          hours: result.hours,
+          materials: result.materials,
+          material_cost: result.material_cost
+        }
+        res.render('customer', viewData)
+      })
+  // db.getServices(id)
+  //   .then(result => {
+  //     console.log(result)
+  //     let viewData = {
+  //       customerId: result[0].customerId,
+  //       name: result[0].name,
+  //       phone: result[0].phone,
+  //       email: result[0].email,
+  //       address: result[0].address,
+  //       jobs: []
+  //     }
+  //     for(let i = 0; i < result.length; i++){
+  //       viewData.jobs.push({
+  //         serviceId: result[i].serviceId,
+  //         description: result[i].description,
+  //         engineer: result[i].engineer,
+  //         hours: result[i].hours,
+  //         materials: result[i].materials,
+  //         material_cost: result[i].material_cost
+  //       })
+  //     }
+  //     // console.log(viewData)
+  //     res.render('customer', {viewData})
+  //   })
+    // .catch(err => {
+    //   res.send('Error: ' + err.message)
+    // })
 })
 
 // GET Add service page
-router.get('add/:id', (req, res) => {
-  res.render('add')
-    .catch(err => {
-      res.send('Error: ' + err.message)
-    })
+router.get('/add/:id', (req, res) => {
+
+  const viewData = {
+    id: req.params.id
+  }
+  res.render('add', viewData)
+    // .catch(err => {
+    //   res.send('Error: ' + err.message)
+    // })
 })
 
 // POST Post service to database
@@ -60,10 +90,10 @@ router.post('/add/:id', (req, res) => {
   const id = Number(req.params.id)
   const serviceData = req.body
   db.addService(serviceData, id)
-    .then(() => res.redirect('customer/:id'))
-    .catch(err => {
-      res.send('Error: ' + err.message)
-    })
+    .then(() => res.redirect(`/customer/${id}`))
+    // .catch(err => {
+    //   res.send('Error: ' + err.message)
+    // })
 })
 
 // // Add customer page

@@ -5,7 +5,7 @@
       Data management system for Coordinator of an IT company to enter customer jobs into database and keep track of jobs
     </p>
   </div>
-  <form action="" method="">
+  <form action="" method="post">
     <label for="filter">Filter: </label>
     <select id="cars" name="filter">
         <option value="a-z">A-Z</option>
@@ -16,27 +16,29 @@
     <input type="text" name="customer-name" placeholder="search customer">
     <input type="submit" value="submit">
   </form>
-  <!-- {{#each obj}} -->
+  {{#each customers}} 
   <div class="customer"> 
     <div class="customer-name">
-      Customer Name
+      {{name}}
     </div>
     <div class="services-required">
-      4 services required
+      To Be Completed
     </div>
     <div class="home-btns">
       <div class="view-more">
-        View More
+        <a href="/customer/{{id}}">View More</a>
       </div>
       <div class="add-service">
-        Add Service
+        <a href="/add/{{id}}">Add Service</a> 
       </div>
     </div>
   </div>
-  <!-- {{/each}} -->
+  {{/each}}
 
   <div class="footer">
     <h3>Made by the TECH-SHOP team:</h3>
     <p>Ellora, Chris, David, Alicia</p>
   </div>
 </div>
+
+
