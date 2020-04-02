@@ -1,0 +1,22 @@
+body {
+  background: #343334;
+  margin: 0;
+}
+
+.home-container {
+  width: 1031px;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+.header,
+.footer {
+  background: #171616;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 50px;
+}
