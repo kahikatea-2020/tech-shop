@@ -1,0 +1,33 @@
+{
+  "name": "tech-shop",
+  "version": "1.0.0",
+  "description": "A data entry system for an IT company to enter customer services into a database and keep track of jobs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kahikatea-2020/tech-shop.git"
+  },
+  "keywords": [
+    "tech-shop",
+    "EDA",
+    "database"
+  ],
+  "author": "Alicia, Chris, David, Ellora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kahikatea-2020/tech-shop/issues"
+  },
+  "homepage": "https://github.com/kahikatea-2020/tech-shop#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.1",
+    "knex": "^0.20.13",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
