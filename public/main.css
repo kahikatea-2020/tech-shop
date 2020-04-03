@@ -111,3 +111,7 @@ body {
   font-size: 0.7rem;
   text-align: center;
 }
+
+.addPage-button {
+  margin-top: 40px;
+}
