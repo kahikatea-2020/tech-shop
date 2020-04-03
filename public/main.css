@@ -18,6 +18,10 @@ body {
   text-align: center;
 }
 
+.header, .customer, .footer{
+  border:2px solid black;
+}
+
 .header {
   margin-bottom: 50px;
 }
