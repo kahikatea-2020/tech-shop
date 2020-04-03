@@ -2,34 +2,39 @@
   <div class="header">
     <h1 class="home-h1">TECH SHOP DATA SERVICE MANAGER</h1>
     <p class="home-description">
-      Data management system for Coordinator of an IT company to enter customer jobs into database and keep track of jobs
+      Data management system for Coordinator of an IT company to enter customer jobs into database and keep track of
+      jobs
     </p>
   </div>
-  <form action="" method="post">
-    <label for="filter">Filter: </label>
+  <form class="filter" action="" method="post">
+    <label class="filterLabel" for="filter">Filter: </label>
     <select id="cars" name="filter">
-        <option value="a-z">A-Z</option>
-        <option value="most-services">Most Services</option>
-        <option value="least-services">Least Services</option>
-        <option value="z-a">Z-A</option>
+      <option value="a-z">A-Z</option>
+      <option value="most-services">Most Services</option>
+      <option value="least-services">Least Services</option>
+      <option value="z-a">Z-A</option>
     </select>
     <input type="text" name="customer-name" placeholder="search customer">
     <input type="submit" value="submit">
   </form>
-  {{#each customers}} 
-  <div class="customer"> 
-    <div class="customer-name">
-      {{name}}
-    </div>
-    <div class="services-required">
-      To Be Completed
-    </div>
-    <div class="home-btns">
-      <div class="view-more">
-        <a href="/customer/{{id}}">View More</a>
-      </div>
-      <div class="add-service">
-        <a href="/add/{{id}}">Add Service</a> 
+  {{#each customers}}
+  <div class="customer">
+    <div class="container">
+      <div class="row">
+        <div class="col customer-name ">
+          {{name}}
+        </div>
+        <div class="col services-required ">
+          To Be Completed
+        </div>
+        <div class="col home-btns ">
+          <div class="view-more">
+            <a href="/customer/{{id}}">View More</a>
+          </div>
+          <div class="add-service">
+            <a href="/add/{{id}}">Add Service</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -40,5 +45,3 @@
     <p>Ellora, Chris, David, Alicia</p>
   </div>
 </div>
-
-
