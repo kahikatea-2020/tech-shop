@@ -1,6 +1,6 @@
 exports.up = (knex) => {
   return knex.schema.createTable('customers', table => {
-    table.increments('id')
+    table.increments('id').primary()
     table.string('name')
     table.string('phone')
     table.string('email')

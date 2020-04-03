@@ -5,16 +5,19 @@
     <form action="/add/{{id}}" method="post">
       <div class="form-container">
         <div>
-          <label for="service-desc">Service description <input type="text" name="service-desc"></label>
+          <label for="description">Service description <input type="text" name="description"></label>
         </div>
         <div>
-          <label for="hours-completed">Hours taken to complete <input type="text" name="hours-completed"></label>
+          <label for="hours">Hours taken to complete <input type="text" name="hours"></label>
         </div>
         <div>
-          <label for="engineer-assigned">Engineer assigned <input type="text" name="engineer-assigned"></label>
+          <label for="engineer">Engineer assigned <input type="text" name="engineer"></label>
         </div>
         <div>
-          <label for="materials-used">Materials used <input type="text" name="materials-used"></label>
+          <label for="materials">Materials used <input type="text" name="materials"></label>
+        </div>
+          <div>
+          <label for="material_cost">Material cost <input type="text" name="material_cost"></label>
         </div>
         <input type="submit" name="submit" value="ADD NEW SERVICE">
       </div>

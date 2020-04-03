@@ -26,11 +26,12 @@ router.get('/', (req, res) => {
 // GET Customer page which displays a customer's information by id & the services associated
 router.get('/customer/:id', (req, res) => {
   const id = Number(req.params.id)
+  console.log("Id:", id)
   db.getServices(id)
       .then(result => {
-        console.log(result)
+        console.log("Result:", result)
         const viewData = {
-          customerId: result.customerId,
+          customerId: id,
           name: result.name,
           phone: result.phone,
           email: result.email,
@@ -42,6 +43,7 @@ router.get('/customer/:id', (req, res) => {
           materials: result.materials,
           material_cost: result.material_cost
         }
+        console.log("View Data: ", viewData)
         res.render('customer', viewData)
       })
   // db.getServices(id)

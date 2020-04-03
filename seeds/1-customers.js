@@ -27,13 +27,13 @@ exports.seed = (knex) => {
           "name": "Jones Associates",
           "phone": 09-111-4378,
           "email": "admin@ja.com",
-            "address": "33 Curis Cescent, Auckland CBD, Auckland"
+          "address": "33 Curis Cescent, Auckland CBD, Auckland"
           }, {
             "id": 5,
-            "name": "Jones Associates",
+            "name": "Zak's Motors",
             "phone": 09-998-2458,
-            "email": "admin@ja.com",
-            "address": "50 Carbine Drive, Mt Wellington, Auckland"
+            "email": "admin@hotmail.com",
+            "address": "14 Hill Drive, Mt Wellington, Auckland"
           }, {
             "id": 6,
             "name": "Everest Glass",
