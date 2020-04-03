@@ -115,3 +115,16 @@ body {
 .addPage-button {
   margin-top: 40px;
 }
+
+.form-container div {
+  margin-bottom: 10px;
+}
+.form-container input[type="text"] {
+  position: fixed;
+  right: 500px;
+  width: 300px;
+}
+
+input[type="submit" i] {
+  border-width: 0px;
+}
