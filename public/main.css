@@ -127,4 +127,5 @@ input[type="submit" i] {
 .form-container input[type="text"] {
   margin-left: 100px;
   width: 400px;
+  border-radius: 30px;
 }
