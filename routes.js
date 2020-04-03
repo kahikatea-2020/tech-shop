@@ -46,10 +46,14 @@ router.get('/customer/:id', (req, res) => {
 
 // GET Add service page
 router.get('/add/:id', (req, res) => {
-  const viewData = {
-    id: req.params.id
-  }
-  res.render('add', viewData)
+  db.getCustomer(Number(req.params.id))
+    .then((customer) => {
+      const viewData = {
+        id: req.params.id,
+        name: customer.name
+      }
+      res.render('add', viewData)
+    })
 })
 
 // POST Post service to database
