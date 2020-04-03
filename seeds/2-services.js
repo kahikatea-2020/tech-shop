@@ -27,7 +27,7 @@ exports.seed = (knex) => {
           'engineer': 'Joe Bloggs',
           'hours': 2,
           'materials': 'new hard drive',
-          'customer_id': 1,
+          'customer_id': 2,
           'material_cost': 200
         }, {
           'id': 4,
@@ -35,7 +35,24 @@ exports.seed = (knex) => {
           'engineer': 'Bob Ross',
           'hours': 6,
           'materials': 'HP Proliant GL720 server',
-          'customer_id': 2,
+          'customer_id': 4,
+          'material_cost': 5000
+        }, {
+          'id': 5,
+          'description': 'Test routes',
+          'engineer': 'Bella Ross',
+          'hours': 6,
+          'materials': 'HP Proliant GL750 server',
+          'customer_id': 5,
+          'material_cost': 5000
+        },
+        {
+          'id': 6,
+          'description': 'paste paper',
+          'engineer': 'Jack Jill',
+          'hours': 6,
+          'materials': 'HP Proliant GL750 server',
+          'customer_id': 6,
           'material_cost': 5000
         }
       ])

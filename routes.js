@@ -26,6 +26,7 @@ router.get('/', (req, res) => {
 // GET Customer page which displays a customer's information by id & the services associated
 router.get('/customer/:id', (req, res) => {
   const id = Number(req.params.id)
+  console.log(req.params.id)
   console.log("Id:", id)
   db.getServices(id)
       .then(result => {
