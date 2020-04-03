@@ -1,17 +1,15 @@
-<div class="customer-container">
-  <a href="/">BACK TO HOME</a>
-  <div class="customer-details">
+<div class="floating-container">
+  <a class="returnHome" href="/">BACK TO HOME</a>
+  <div class="floating-details">
     <h1 class="customer-h1">{{name}}</h1>
     <p>Customer Id: {{customerId}}</p>
     <p>Email: {{email}}</p>
     <p>Address: {{address}}</p>
     {{!-- <p>Ser</p>
     <p>Jobs</p> --}}
+    <div class="add-service-btn">
+      <a href="/add/{{customerId}}">ADD NEW SERVICE</a>
+    </div>
   </div>
-  <div class="customer-img">
-    <img src="" alt="">img soon
-  </div>
-  <div class="add-service-btn">
-    <a href="/add/{{customerId}}">ADD NEW SERVICE</a> 
-  </div>
+
 </div>

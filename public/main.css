@@ -3,6 +3,7 @@ body {
   margin: 0;
 }
 
+/* HOME STYLES */
 .home-container {
   width: 1031px;
   height: auto;
@@ -19,4 +20,94 @@ body {
 
 .header {
   margin-bottom: 50px;
+}
+
+.customer,
+.home-btns {
+  display: flex;
+}
+
+.customer-name {
+  color: #2ad858;
+}
+.services-required {
+  color: white;
+}
+.home-btns a {
+  color: black;
+}
+.customer {
+  margin-top: 5px;
+  padding: 20px;
+  background: #1e1e1e;
+  text-align: center;
+}
+
+.view-more {
+  background: white;
+}
+
+.add-service {
+  background: lightgreen;
+}
+
+.home-btns {
+  position: relative;
+  left: 100px;
+}
+.customer-name,
+.services-required {
+  padding: 3px;
+}
+.view-more,
+.add-service {
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0.8rem;
+}
+.footer {
+  margin-top: 100px;
+}
+
+.filter {
+  margin-bottom: 10px;
+}
+
+.filterLabel {
+  color: white;
+  margin-right: 50px;
+  font-size: 1.5rem;
+}
+/* HOME STYLE ENDS */
+
+/* CUSTOMER STYLE STARTS */
+.floating-container {
+  background: #1e1e1e;
+  margin: 35vh auto 0 auto;
+  width: 800px;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.63);
+}
+
+.floating-details {
+  color: #2ad858;
+  padding: 50px;
+}
+
+.returnHome {
+  color: white;
+  background: black;
+  padding: 10px;
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+}
+
+.add-service-btn {
+  color: black;
+  background: lightgreen;
+  padding: 20px;
+  width: 200px;
+  font-size: 0.7rem;
+  text-align: center;
 }
