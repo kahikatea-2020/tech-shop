@@ -48,12 +48,3 @@ function addCustomer (custData, db = connection) {
 
   })
 }
-
-// function addService (serviceData, id, db = connection) {
-//   return db('services').insert({
-//     description: serviceData.description,
-//     hours: serviceData.hours,
-//     materials: serviceData.materials,
-//     customer_id: id
-//   })
-// }
