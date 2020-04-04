@@ -14,7 +14,18 @@ module.exports = router;
 // GET Home page which displays list of customers
 router.get("/", (req, res) => {
   db.getCustomers()
+    .then(async (customers) => {
+      for (let i = 0; i < customers.length; i++) {
+        customers[i].servicesCount = 0;
+        await db.getServices(customers[i].id).then((services) => {
+          customers[i].servicesCount = services.length;
+        });
+      }
+      return customers;
+    })
     .then((customers) => {
+      console.log(customers);
+
       res.render("home", { customers });
     })
     .catch((err) => {
