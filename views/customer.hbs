@@ -5,6 +5,12 @@
     <p>Customer Id: {{customerId}}</p>
     <p>Email: {{email}}</p>
     <p>Address: {{address}}</p>
+    <p>Services Required</p>
+    <ul>
+      {{#each services}}
+        <li>{{description}}</li>
+      {{/each}}
+    </ul>
     <div class="add-service-btn">
       <a href="/add/{{customerId}}">ADD NEW SERVICE</a>
     </div>
