@@ -92,16 +92,15 @@ function mostJob(customers, searchQuery) {
     customers = searchFilter(customers, searchQuery);
   }
 
-  return customers;
+  return customers.sort((a, b) => b.servicesCount - a.servicesCount);
 }
 function leastJob(customers, searchQuery) {
   if (searchQuery.length > 0) {
     customers = searchFilter(customers, searchQuery);
   }
 
-  return customers;
+  return customers.sort((a, b) => a.servicesCount - b.servicesCount);
 }
-
 function searchFilter(customers, searchQuery) {
   return customers.filter((customer) => {
     if (customer.name.toLowerCase().includes(searchQuery.toLowerCase())) {
