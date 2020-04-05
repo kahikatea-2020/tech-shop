@@ -1,11 +1,11 @@
 const express = require("express");
 
 const db = require("./db");
-
+const filters = require("./filters");
 const router = express.Router();
-
 module.exports = router;
 
+let settings = filters.settings;
 // // TEST
 // router.get('/foo', (req, res) => {
 //   res.send('Testing....Foo!')
@@ -14,6 +14,9 @@ module.exports = router;
 // GET Home page which displays list of customers
 router.get("/", (req, res) => {
   db.getCustomers()
+    .then((customers) => {
+      return filters.applyFilter(customers, settings);
+    })
     .then(async (customers) => {
       for (let i = 0; i < customers.length; i++) {
         customers[i].servicesCount = 0;
@@ -24,15 +27,41 @@ router.get("/", (req, res) => {
       return customers;
     })
     .then((customers) => {
-      console.log(customers);
-
       res.render("home", { customers });
     })
     .catch((err) => {
-      res.send("Error: " + err.message);
+      res.send("Error: " + err);
     });
 });
 
+router.post("/", (req, res) => {
+  Object.keys(settings).forEach(function (key) {
+    if (key != "searchQuery") {
+      settings[key] = false;
+    }
+  });
+
+  // if alphabetical A-Z is true
+  if (req.body.filter === "a-z") {
+    settings.aZ = true;
+  }
+  // if alphabetical Z-A is true
+  if (req.body.filter === "z-a") {
+    settings.zA = true;
+  }
+  // if most jobs is true
+  if (req.body.filter === "most-services") {
+    settings.mostJob = true;
+  }
+  // if least jobs is true
+  if (req.body.filter === "least-services") {
+    settings.leastJob = true;
+  }
+  settings.searchQuery = req.body["customer-name"];
+
+  res.redirect("/");
+  // if search by name is true
+});
 // GET Customer page which displays a customer's information by id & the services associated
 router.get("/customer/:id", (req, res) => {
   const id = Number(req.params.id);
