@@ -1,0 +1,19 @@
+<div class="floating-container">
+  <a class="returnHome" href="/">BACK TO HOME</a>
+  <div class="floating-details">
+    <h1 class="customer-h1">{{name}}</h1>
+    <p>Customer Id: {{customerId}}</p>
+    <p>Email: {{email}}</p>
+    <p>Address: {{address}}</p>
+    <p>Services Required</p>
+    <ul>
+      {{#each services}}
+        <li>{{description}}</li>
+      {{/each}}
+    </ul>
+    <div class="add-service-btn">
+      <a href="/add/{{customerId}}">ADD NEW SERVICE</a>
+    </div>
+  </div>
+
+</div>

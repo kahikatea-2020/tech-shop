@@ -4,6 +4,7 @@
   "description": "A data entry system for an IT company to enter customer services into a database and keep track of jobs.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
