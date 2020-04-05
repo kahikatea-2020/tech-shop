@@ -14,9 +14,6 @@ let settings = filters.settings;
 // GET Home page which displays list of customers
 router.get("/", (req, res) => {
   db.getCustomers()
-    .then((customers) => {
-      return filters.applyFilter(customers, settings);
-    })
     .then(async (customers) => {
       for (let i = 0; i < customers.length; i++) {
         customers[i].servicesCount = 0;
@@ -25,6 +22,9 @@ router.get("/", (req, res) => {
         });
       }
       return customers;
+    })
+    .then((customers) => {
+      return filters.applyFilter(customers, settings);
     })
     .then((customers) => {
       res.render("home", { customers });
