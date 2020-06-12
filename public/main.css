@@ -31,7 +31,8 @@ body {
   display: flex;
 }
 
-.customer-name {
+.customer-name,
+.customer-name a {
   color: #2ad858;
 }
 .services-required {
