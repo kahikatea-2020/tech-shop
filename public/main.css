@@ -105,7 +105,8 @@ body {
   padding: 50px;
 }
 
-.floating-h1 {
+.floating-h1,
+.customer-h1 {
   margin-bottom: 50px;
 }
 
@@ -134,11 +135,17 @@ body {
   width: 200px;
   font-size: 0.7rem;
   text-align: center;
+  display: inline;
 }
 
 .add-service-btn a{
   color:black;
 }
+
+.align-button-right {
+  text-align: right;
+}
+
 .addPage-button {
   margin-top: 40px;
   text-align: right;
