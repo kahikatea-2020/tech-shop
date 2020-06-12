@@ -8,19 +8,24 @@
     <form action="/add/{{id}}" method="post">
       <div class="form-container">
         <div>
-          <label for="description">Service description <input type="text" name="description"></label>
+          <label for="description">Service description</label>
+          <input type="text" name="description">
+        <div>
+        </div>
+          <label for="hours">Hours taken to complete</label>
+          <input type="text" name="hours">
         </div>
         <div>
-          <label for="hours">Hours taken to complete <input type="text" name="hours"></label>
+          <label for="engineer">Engineer assigned</label>
+          <input type="text" name="engineer">
         </div>
         <div>
-          <label for="engineer">Engineer assigned <input type="text" name="engineer"></label>
+          <label for="materials">Materials used</label>
+          <input type="text" name="materials">
         </div>
         <div>
-          <label for="materials">Materials used <input type="text" name="materials"></label>
-        </div>
-          <div>
-          <label for="material_cost">Material cost <input type="text" name="material_cost"></label>
+          <label for="material_cost">Material cost</label>
+          <input type="text" name="material_cost">
         </div>
         <div class="addPage-button">
           <input class="add-service-btn" type="submit" name="submit" value="ADD NEW SERVICE" />

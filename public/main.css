@@ -148,7 +148,7 @@ input[type="submit" i] {
 }
 
 .form-container input[type="text"] {
-  margin-left: 100px;
+  float: right;
   width: 400px;
   border-radius: 30px;
 }
