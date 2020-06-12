@@ -119,7 +119,7 @@ body {
   justify-content: space-between;
 }
 
-.buttons a:hover {
+.returnHome:hover {
   color: #2ad858;
 }
 
