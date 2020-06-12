@@ -108,9 +108,18 @@ body {
   color: white;
   background: black;
   padding: 10px;
-  position: relative;
   top: 10px;
   text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#floatRight {
+  
 }
 
 .add-service-btn {

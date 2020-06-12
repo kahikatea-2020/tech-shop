@@ -1,5 +1,8 @@
 <div class="floating-container-add">
-  <a class = "returnHome" href="/customer/{{id}}">BACK TO PROFILE</a>
+  <div class="buttons">
+    <a class="returnHome" href="/">BACK TO HOME</a>
+    <a class = "returnHome" href="/customer/{{id}}">BACK TO PROFILE</a>
+  </div>
   <div class="floating-details">
     <h1 class="floating-h1">ADD Service for customer {{name}}</h1>
     <form action="/add/{{id}}" method="post">
