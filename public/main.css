@@ -119,6 +119,10 @@ body {
   justify-content: space-between;
 }
 
+.buttons a:hover {
+  color: #2ad858;
+}
+
 .add-service-btn {
   color: black;
   background: lightgreen;
