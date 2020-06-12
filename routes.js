@@ -66,9 +66,6 @@ router.post("/", (req, res) => {
 router.get("/customer/:id", (req, res) => {
   const id = Number(req.params.id);
   db.getServices(id).then((result) => {
-    console.log(result);
-    console.log(result[0]);
-
     const viewData = {
       customerId: result[0].customerId,
       name: result[0].name,

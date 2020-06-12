@@ -31,7 +31,8 @@ body {
   display: flex;
 }
 
-.customer-name {
+.customer-name,
+.customer-name a {
   color: #2ad858;
 }
 .services-required {
@@ -88,7 +89,7 @@ body {
 /* CUSTOMER STYLE STARTS */
 .floating-container {
   background: #1e1e1e;
-  margin: 35vh auto 0 auto;
+  margin: 10vh auto 0 auto;
   width: 800px;
   box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.63);
 }
@@ -108,9 +109,18 @@ body {
   color: white;
   background: black;
   padding: 10px;
-  position: relative;
   top: 10px;
   text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons a:hover {
+  color: #2ad858;
 }
 
 .add-service-btn {
