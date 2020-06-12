@@ -105,6 +105,10 @@ body {
   padding: 50px;
 }
 
+.floating-h1 {
+  margin-bottom: 50px;
+}
+
 .returnHome {
   color: white;
   background: black;
