@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/kahikatea-2020/tech-shop#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^4.0.1",
     "knex": "^0.20.13",
     "sqlite3": "^4.1.1"
